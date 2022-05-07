@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>vue 源码解析</title>
+    <meta name="description" content="overok的个人博客">
+    <link rel="icon" href="/favicon.ico">
+    
+    <link rel="preload" href="/assets/css/0.styles.6aaa91c1.css" as="style"><link rel="preload" href="/assets/js/app.80949748.js" as="script"><link rel="preload" href="/assets/js/14.c656c404.js" as="script"><link rel="prefetch" href="/assets/js/10.d2ad302a.js"><link rel="prefetch" href="/assets/js/11.ba7b4b5a.js"><link rel="prefetch" href="/assets/js/12.da032b17.js"><link rel="prefetch" href="/assets/js/13.1bdc372a.js"><link rel="prefetch" href="/assets/js/15.f046afd2.js"><link rel="prefetch" href="/assets/js/16.284617e9.js"><link rel="prefetch" href="/assets/js/17.3ec34e19.js"><link rel="prefetch" href="/assets/js/18.6531dde0.js"><link rel="prefetch" href="/assets/js/19.b58b2cdf.js"><link rel="prefetch" href="/assets/js/2.854dcf62.js"><link rel="prefetch" href="/assets/js/20.a22e0c06.js"><link rel="prefetch" href="/assets/js/21.f714f2e3.js"><link rel="prefetch" href="/assets/js/22.efff3bb6.js"><link rel="prefetch" href="/assets/js/23.446776c1.js"><link rel="prefetch" href="/assets/js/24.71ab748f.js"><link rel="prefetch" href="/assets/js/25.51ac2e19.js"><link rel="prefetch" href="/assets/js/26.113896e2.js"><link rel="prefetch" href="/assets/js/27.3b0f64d0.js"><link rel="prefetch" href="/assets/js/28.1a3b14fb.js"><link rel="prefetch" href="/assets/js/29.5bb27ca4.js"><link rel="prefetch" href="/assets/js/3.457d4563.js"><link rel="prefetch" href="/assets/js/4.385b41c7.js"><link rel="prefetch" href="/assets/js/5.344d12e5.js"><link rel="prefetch" href="/assets/js/6.e8dc6b3e.js"><link rel="prefetch" href="/assets/js/7.d7e07fce.js"><link rel="prefetch" href="/assets/js/8.e0be92f4.js"><link rel="prefetch" href="/assets/js/9.39ed0693.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.6aaa91c1.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/favicon.png" alt="" class="logo"> <!----></a> <div class="links" style="max-width:nullpx;"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/index.html/" class="nav-link">首页</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">笔记</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/javascript/" class="nav-link">JavaScript</a></li><li class="dropdown-item"><!----> <a href="/frame/" class="nav-link router-link-active">框架</a></li></ul></div></div><div class="nav-item"><a href="/blogs/" class="nav-link">博客</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/index.html/" class="nav-link">首页</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">笔记</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/javascript/" class="nav-link">JavaScript</a></li><li class="dropdown-item"><!----> <a href="/frame/" class="nav-link router-link-active">框架</a></li></ul></div></div><div class="nav-item"><a href="/blogs/" class="nav-link">博客</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/frame/" aria-current="page" class="sidebar-link">猎杀时刻</a></li><li><a href="/frame/Vue.html" class="sidebar-link">Vue 例题</a></li><li><a href="/frame/Vue3.html" class="sidebar-link">Vue3</a></li><li><a href="/frame/VueUse.html" class="sidebar-link">VueUse</a></li><li><a href="/frame/VueHooks.html" class="sidebar-link">vue3 快捷轮子</a></li><li><a href="/frame/VueCode.html" aria-current="page" class="active sidebar-link">vue 源码解析</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/frame/VueCode.html#源码目录" class="sidebar-link">源码目录</a></li></ul></li><li><a href="/frame/React.html" class="sidebar-link">React</a></li><li><a href="/frame/ReactHooks.html" class="sidebar-link">react hooks</a></li></ul> </div> <div class="page"> <div class="content"><h1 id="vue-源码解析"><a href="#vue-源码解析" class="header-anchor">#</a> vue 源码解析</h1> <h2 id="源码目录"><a href="#源码目录" class="header-anchor">#</a> 源码目录</h2> <div class="language-javascript line-numbers-mode"><pre class="language-javascript"><code><span class="token operator">&lt;</span>img src<span class="token operator">=</span><span class="token string">&quot;https://static01.imgkr.com/temp/3c633bf18513462f838ecf6527e82193.png&quot;</span><span class="token operator">&gt;</span>
+
+├─ <span class="token punctuation">.</span>circleci                 # 包含CircleCI持续集成<span class="token operator">/</span>持续部署工具的配置文件
+├─ benchmarks                # 基准和性能测试文件，vue的跑分demo，例如大数据量的table或者渲染大量的<span class="token constant">SVG</span>
+├─ dist                      # 构建后输出的不同版本vue文件（<span class="token constant">UMD</span>、common<span class="token punctuation">.</span>js、生产和开发包）
+├─ examples                  # 用vue写的一些小demo
+├─ flow                      # <span class="token function">进行静态类型检测，静态类型检测类型声明文件</span><span class="token punctuation">(</span>https<span class="token operator">:</span><span class="token operator">/</span><span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">flow.org</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">)</span>
+├─ packages                  # 包含服务端渲染和模块编译器两种不同的<span class="token constant">NPM</span>包，是提供不同使用场景使用的
+├─ scripts                   # 存放npm脚本配置文件，结合webpack、rollup进行编译、测试、构建等操作
+│   ├── config<span class="token punctuation">.</span>js             # 包含在<span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">dist</span><span class="token template-punctuation string">`</span></span>中找到的所有文件的生成配置
+│   └── build<span class="token punctuation">.</span>js              # 对config<span class="token punctuation">.</span>js中所有的rollup配置进行构建
+├─ src                       # 主要源码所在位置，核心内容
+│   ├── compiler             # 编译器代码，将template编译成render函数
+│   ├── core                 # vue核心代码，包括内置组件、全局<span class="token constant">API</span>封装、vue实例化、观察者、虚拟<span class="token constant">DOM</span>、工具函数等
+│   │   ├── components       # 组件相关属性，主要是keep<span class="token operator">-</span>Alive
+│   │   ├── global<span class="token operator">-</span>api       # vue全局api。例如：Vue<span class="token punctuation">.</span>use Vue<span class="token punctuation">.</span>extend vue<span class="token punctuation">.</span>mixin
+│   │   ├── instance         # 实例化相关内容，生命周期，事件等
+│   │   ├── observe          # 响应式核心目录，双向绑定相关文件
+│   │   ├── util             # 工具方法
+│   │   └── vdom             # 包括虚拟<span class="token constant">DOM</span>，创建（creation）和打补丁（patching）的代码
+│   ├── platforms            # 包含平台特有的相关代码，vue是一个跨平台的mvvm框架（web、weex）
+│   │   ├── web              # web端
+│   │   │   ├── compiler     # web端编译相关代码，用来编译模版或render函数
+│   │   │   ├── runtime      # web端运行是相关代码，用来创建vue实例等
+│   │   │   ├── server       # 服务端渲染
+│   │   │   └── util         # 相关工具类
+│   │   └── weex             # 基于通用跨平台的web开发语言和开发经验，来构建Android、ios和web应用
+│   ├── server               # 服务端渲染（ssr）
+│   ├── sfc                  # 转换单文件组件（<span class="token operator">*</span><span class="token punctuation">.</span>vue）
+│   └── shared               # 全局共享的方法和常量
+├─ test                      # test测试用例
+├─ types                     # vue新版本支持TypeScript，主要是用typeScript声明文件
+├─ <span class="token punctuation">.</span>editorconfig             # 文本编码样式配置文件
+├─ <span class="token punctuation">.</span>eslintignore             # eslint校验忽略文件
+├─ <span class="token punctuation">.</span>eslintrc<span class="token punctuation">.</span>js              # eslint配置文件
+├─ <span class="token punctuation">.</span>flowconfig               # flow配置文件
+├─ <span class="token constant">LICENSE</span>                   # 项目开源协议
+Flow<span class="token operator">:</span> 类型检测工具
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br></div></div></div> <div class="page-edit"><!----> <!----></div> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/frame/VueHooks.html" class="prev">
+          vue3 快捷轮子
+        </a></span> <span class="next"><a href="/frame/React.html">
+          React
+        </a>
+        →
+      </span></p></div> </div> <!----></div></div>
+    <script src="/assets/js/app.80949748.js" defer></script><script src="/assets/js/14.c656c404.js" defer></script>
+  </body>
+</html>
