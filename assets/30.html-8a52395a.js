@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-1a20fe76","path":"/blogs/note/30.html","title":"三十而立","lang":"en-US","frontmatter":{"title":"三十而立","date":"2020/11/15"},"headers":[{"level":2,"title":"三十而立 山山而川","slug":"三十而立-山山而川","link":"#三十而立-山山而川","children":[]}],"git":{},"filePathRelative":"blogs/note/30.md"}');export{e as data};

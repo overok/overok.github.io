@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-0ed1a19a","path":"/blogs/note/2024.html","title":"2024总结","lang":"en-US","frontmatter":{"title":"2024总结","date":"2024/01/11"},"headers":[{"level":2,"title":"New Year","slug":"new-year","link":"#new-year","children":[]}],"git":{},"filePathRelative":"blogs/note/2024.md"}');export{e as data};

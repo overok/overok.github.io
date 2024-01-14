@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-a1afdd48","path":"/docs/all/Vue.html","title":"vue","lang":"en-US","frontmatter":{},"headers":[{"level":2,"title":"Nprogress 页面顶部加载条","slug":"nprogress-页面顶部加载条","link":"#nprogress-页面顶部加载条","children":[]}],"git":{},"filePathRelative":"docs/all/Vue.md"}');export{e as data};

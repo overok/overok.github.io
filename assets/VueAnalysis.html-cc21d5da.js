@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-66c544e0","path":"/docs/all/VueAnalysis.html","title":"vue 源码解析","lang":"en-US","frontmatter":{},"headers":[{"level":2,"title":"Vue的基本原理","slug":"vue的基本原理","link":"#vue的基本原理","children":[]},{"level":2,"title":"源码目录","slug":"源码目录","link":"#源码目录","children":[]}],"git":{},"filePathRelative":"docs/all/VueAnalysis.md"}');export{e as data};
