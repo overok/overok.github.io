@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-29148730","path":"/docs/all/DesignPattern.html","title":"设计模式","lang":"en-US","frontmatter":{},"headers":[{"level":2,"title":"观察者模式","slug":"观察者模式","link":"#观察者模式","children":[]}],"git":{},"filePathRelative":"docs/all/DesignPattern.md"}');export{e as data};

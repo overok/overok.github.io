@@ -1,0 +1,1 @@
+const t=JSON.parse('{"key":"v-5f375923","path":"/blogs/other/aphorisms.html","title":"三十而立","lang":"en-US","frontmatter":{"title":"三十而立","date":"2024/6/1","categories":["reco"]},"headers":[],"git":{},"filePathRelative":"blogs/other/aphorisms.md"}');export{t as data};

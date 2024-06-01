@@ -1,0 +1,1 @@
+const t=JSON.parse('{"key":"v-2c5fd3af","path":"/blogs/note/other.html","title":"越长大越孤单","lang":"en-US","frontmatter":{"title":"越长大越孤单","date":"2019/04/09"},"headers":[],"git":{},"filePathRelative":"blogs/note/other.md"}');export{t as data};
